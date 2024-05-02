@@ -2,7 +2,7 @@
   "name": "cs-110-professional-website",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://xTh3Unkn0wnx.github.io/cs-110-andrew-ocegueda-professional-website/",
+  "homepage": "https://xth3unkn0wnx.github.io/cs-110-andrew-ocegueda-professional-website/",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
