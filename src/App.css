@@ -1,10 +1,9 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
 }
 
-body {
-    font-family: 'Roboto', sans-serif;
-    padding: 5vh 5vw 5vh 5vw;
+main section {
+    padding: 20px 0 20px 0;
 }

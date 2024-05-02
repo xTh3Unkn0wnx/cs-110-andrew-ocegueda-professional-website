@@ -26,9 +26,32 @@ function App() {
         </section>
         <section className='education-container' aria-label='education section'>
           <h2>Education</h2>
+          <section>
+            <h3>University of California, Riverside <span className='right'>August 2021 - June 2024</span></h3>
+            <p>Bachelor of Science in Computer Science with Business Applications</p>
+          </section>
+          <section>
+            <h3>Moreno Valley College <span className="right">June 2018 - June 2021</span></h3>
+            <p>Computer Science for Transfer</p>
+          </section>
         </section>
         <section>
           <h2>Projects</h2>
+          <section>
+            <h3>Full Stack Website</h3>
+            <p>With a team of 4 people, we built a full stack web application utilizing React, Node, Express, Axios, React Router, FastAPI, and MongoDB</p>
+            <FontAwesomeIcon icon={faGithub} aria-label='react logo' />
+          </section>
+          <section>
+            <h3>Dynamic Programming Algorithm</h3>
+            <p>I created a program that utilizes dynamic programming to find the shortest amount of edits between two words</p>
+            <FontAwesomeIcon icon={faGithub} aria-label='react logo' />
+          </section>
+          <section>
+            <h3>Arduino Alarm Clock</h3>
+            <p>I created a the hardware and software portion of the alarm clock using components from an Arduino set and using the official Arduino IDE to run C code on the UNO 3</p>
+            <FontAwesomeIcon icon={faGithub} aria-label='react logo' />
+          </section>
         </section>
         <section>
           <h2>Achievements</h2>
