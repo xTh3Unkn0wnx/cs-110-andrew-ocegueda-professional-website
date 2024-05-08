@@ -24,9 +24,9 @@ footer {
   justify-content: space-between;
 }
 
-main {
-  margin-top: 100px;
-}
+/* main {
+  padding-top: 100px;
+} */
 
 main section {
     padding: 20px 0 20px 0;
@@ -41,7 +41,8 @@ main section {
 .profile-pic {
   width: 300px;
   height: 300px;
-  background-color: #2d0052;
+  background-color: rgba(0, 0, 0, 0.50);
+  /* background-color: #2d0052; */
   display: block;
   margin: 0 auto;
   border-radius: 50%;
@@ -67,13 +68,13 @@ main section {
 }
 
 .hero-section {
-  background-color: #333;
-  /* padding: 5vh 5vw 5vh 5vw; */
   margin: auto;
+  background-image: url("./assets/pexels-danielabsi-952670.jpg");
+  background-size: cover;
 }
 
 .hero-container {
-  animation: fadeIn 3s ease-in-out;
+  animation: fadeIn 1s ease-in-out;
 }
 
 .hero-about-me {
@@ -97,7 +98,7 @@ main section {
 }
 
 .animate-on-scroll {
-  animation: fadeIn 3s ease-in-out forwards;
+  animation: fadeIn 5s ease-in-out forwards;
 }
 
 /* Media Queries */

@@ -6,14 +6,14 @@ function Section({
   section_title = "Section Title",
   classnames = "",
   children = null,
-  // container_anime = container,
-  // item_anime = item,
   container_motion = {},
   item_motion = {},
+  styleCon = {},
 }) {
   return (
     <motion.section
       className={` ${classnames} about-me adjustable-padding min-height `}
+      {...styleCon}
       {...container_motion}
     >
       <motion.h2 {...item_motion}>{section_title}</motion.h2>
