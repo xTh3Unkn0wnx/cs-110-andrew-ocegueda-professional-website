@@ -1,5 +1,5 @@
 import './App.css';
-import { useEffect } from 'react';
+import React, { Suspense, useEffect } from 'react';
 import photo1 from './assets/Picture1.png';
 import ucr from './assets/UCR.jpg';
 import mvc from './assets/MVC.jpg';
@@ -10,7 +10,8 @@ import { motion, useAnimation } from 'framer-motion';
 import NavBar from './component/NavBar';
 import Section from './component/Section';
 import { container, item, item2 } from './component/Animation';
-import CubeScene from './component/Cube';
+// import CubeScene from './component/Cube';
+const CubeScene = React.lazy(() => import('./component/Cube'));
 
 function App() {
   const controls = useAnimation();
@@ -74,9 +75,13 @@ function App() {
                     margin: '0 auto',
                   }}
                 >
-                  <CubeScene cubeSize={[3, 3, 3]} />
+                  <Suspense fallback={<div>Loading...</div>}>
+                    <CubeScene cubeSize={[3, 3, 3]} />
+                  </Suspense>
                   Andrew Ocegueda
-                  <CubeScene cubeSize={[3, 3, 3]} />
+                  <Suspense fallback={<div>Loading...</div>}>
+                    <CubeScene cubeSize={[3, 3, 3]} />
+                  </Suspense>
                 </div>
               </div>
             </motion.h1>
@@ -167,10 +172,12 @@ function App() {
               }}
             >
               <div>
-                <CubeScene
-                  cubeSize={[2, 2, 2]}
-                  size='4rem'
-                />
+                <Suspense fallback={<div>Loading...</div>}>
+                  <CubeScene
+                    cubeSize={[2, 2, 2]}
+                    size='4rem'
+                  />
+                </Suspense>
               </div>
               <div>
                 University of California, Riverside{' '}
@@ -210,21 +217,27 @@ function App() {
               }}
             >
               <div>
-                <CubeScene
-                  cubeSize={[2, 2, 2]}
-                  size='4rem'
-                />
+                <Suspense fallback={<div>Loading...</div>}>
+                  <CubeScene
+                    cubeSize={[2, 2, 2]}
+                    size='4rem'
+                  />
+                </Suspense>
               </div>
               <div>
                 Moreno Valley College{' '}
                 <span className='right'>June 2018 - June 2021</span>
               </div>
             </h3>
-            <p style={{
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-            }}>Computer Science for Transfer</p>
+            <p
+              style={{
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}
+            >
+              Computer Science for Transfer
+            </p>
             <img
               src={mvc}
               alt='Logo of Moreno Valley College'

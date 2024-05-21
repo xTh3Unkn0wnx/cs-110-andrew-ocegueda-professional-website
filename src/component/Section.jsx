@@ -1,13 +1,14 @@
-import "./../App.css";
-import { motion } from "framer-motion";
-import React from "react";
-import CubeScene from './Cube';
+import './../App.css';
+import { motion } from 'framer-motion';
+import React, { Suspense } from 'react';
+// import CubeScene from './Cube';
+const CubeScene = React.lazy(() => import('./Cube'));
 
 function Section({
-  section_title = "Section Title",
-  classnames = "",
+  section_title = 'Section Title',
+  classnames = '',
   children = null,
-  section_id = "",
+  section_id = '',
   container_motion = {},
   item_motion = {},
   styleCon = {},
@@ -19,28 +20,36 @@ function Section({
       {...container_motion}
       id={section_id}
     >
-      <motion.h2 {...item_motion}
-      style={{
-        fontSize: "4rem",
-        margin: "2rem 0",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-      whileHover={{ scale: 1.15}}
-      >
-        <CubeScene cubeSize={[2.5,2.5,2.5]}/>
-        {section_title}
-        <CubeScene cubeSize={[2.5,2.5,2.5]}/>
-        </motion.h2>
-      {React.Children.map(children, (child) => (
-        <motion.div {...item_motion}
-        whileHover={{ scale: 1.05}}
+      <motion.h2
+        {...item_motion}
         style={{
-          margin: "2rem 0",
-          fontSize: "1.5rem",
+          fontSize: '4rem',
+          margin: '2rem 0',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
         }}
-        >{child}</motion.div>
+        whileHover={{ scale: 1.15 }}
+      >
+        <Suspense fallback={<div>Loading...</div>}>
+          <CubeScene cubeSize={[2.5, 2.5, 2.5]} />
+        </Suspense>
+        {section_title}
+        <Suspense fallback={<div>Loading...</div>}>
+          <CubeScene cubeSize={[2.5, 2.5, 2.5]} />
+        </Suspense>
+      </motion.h2>
+      {React.Children.map(children, (child) => (
+        <motion.div
+          {...item_motion}
+          whileHover={{ scale: 1.05 }}
+          style={{
+            margin: '2rem 0',
+            fontSize: '1.5rem',
+          }}
+        >
+          {child}
+        </motion.div>
       ))}
     </motion.section>
   );

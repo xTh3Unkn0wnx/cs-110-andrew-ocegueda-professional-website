@@ -1,8 +1,20 @@
-# React + Vite
+# Andrew Ocegueda's Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the code for Andrew's Website
 
-Currently, two official plugins are available:
+## How to visit website?
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+visit the url: <https://xth3unkn0wnx.github.io/cs-110-andrew-ocegueda-professional-website/>
+
+<em><strong> Note this website is best for computers, not mobile devices </strong></em>
+
+## Technologies Used
+
+<ol>
+    <li>Vite</li>
+    <li>React</li>
+    <li>FramerMotion</li>
+    <li>ThreeJS/Fiber</li>
+</ol>
+
+By: Andrew Ocegueda
