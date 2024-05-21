@@ -1,6 +1,7 @@
 import "./../App.css";
 import { motion } from "framer-motion";
 import React from "react";
+import CubeScene from './Cube';
 
 function Section({
   section_title = "Section Title",
@@ -21,11 +22,17 @@ function Section({
       <motion.h2 {...item_motion}
       style={{
         fontSize: "4rem",
-        textAlign: "center",
         margin: "2rem 0",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
       }}
       whileHover={{ scale: 1.15}}
-      >{section_title}</motion.h2>
+      >
+        <CubeScene cubeSize={[2.5,2.5,2.5]}/>
+        {section_title}
+        <CubeScene cubeSize={[2.5,2.5,2.5]}/>
+        </motion.h2>
       {React.Children.map(children, (child) => (
         <motion.div {...item_motion}
         whileHover={{ scale: 1.05}}

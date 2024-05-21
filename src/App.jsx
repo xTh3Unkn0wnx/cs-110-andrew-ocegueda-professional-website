@@ -10,6 +10,7 @@ import { motion, useAnimation } from 'framer-motion';
 import NavBar from './component/NavBar';
 import Section from './component/Section';
 import { container, item, item2 } from './component/Animation';
+import CubeScene from './component/Cube';
 
 function App() {
   const controls = useAnimation();
@@ -33,11 +34,14 @@ function App() {
       >
         <NavBar />
       </header>
-      <div id='top' style={{
-        display: "absolute",
-        height: "0",
-        width: "0",
-      }}></div>
+      <div
+        id='top'
+        style={{
+          display: 'absolute',
+          height: '0',
+          width: '0',
+        }}
+      ></div>
       <main>
         <section
           aria-label='hero section'
@@ -57,7 +61,24 @@ function App() {
               }}
               whileHover={{ y: -30 }}
             >
-              Andrew Ocegueda
+              <div
+                style={{
+                  display: 'flex',
+                }}
+              >
+                <div
+                  style={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    margin: '0 auto',
+                  }}
+                >
+                  <CubeScene cubeSize={[3, 3, 3]} />
+                  Andrew Ocegueda
+                  <CubeScene cubeSize={[3, 3, 3]} />
+                </div>
+              </div>
             </motion.h1>
             <motion.div
               className='picture-container'
@@ -138,11 +159,31 @@ function App() {
           }}
         >
           <section>
-            <h3>
-              University of California, Riverside{' '}
-              <span className='right'>August 2021 - June 2024</span>
+            <h3
+              style={{
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}
+            >
+              <div>
+                <CubeScene
+                  cubeSize={[2, 2, 2]}
+                  size='4rem'
+                />
+              </div>
+              <div>
+                University of California, Riverside{' '}
+                <span className='right'>August 2021 - June 2024</span>
+              </div>
             </h3>
-            <p>
+            <p
+              style={{
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}
+            >
               Bachelor of Science in Computer Science with Business Applications
             </p>
             <img
@@ -161,11 +202,29 @@ function App() {
             />
           </section>
           <section>
-            <h3>
-              Moreno Valley College{' '}
-              <span className='right'>June 2018 - June 2021</span>
+            <h3
+              style={{
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}
+            >
+              <div>
+                <CubeScene
+                  cubeSize={[2, 2, 2]}
+                  size='4rem'
+                />
+              </div>
+              <div>
+                Moreno Valley College{' '}
+                <span className='right'>June 2018 - June 2021</span>
+              </div>
             </h3>
-            <p>Computer Science for Transfer</p>
+            <p style={{
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}>Computer Science for Transfer</p>
             <img
               src={mvc}
               alt='Logo of Moreno Valley College'
@@ -234,7 +293,9 @@ function App() {
             <h3>Dynamic Programming Algorithm</h3>
             <p>
               I created a program that utilizes dynamic programming to find the
-              shortest amount of edits between two words
+              shortest amount of edits between two words. For example, to Change
+              &quot;Goblin&quot; to &quot;Goblet&quot; it would take 2 edits.
+              Replacing the i with an e and replacing n with t.
             </p>
             <FontAwesomeIcon
               icon={faGithub}
@@ -246,7 +307,9 @@ function App() {
             <p>
               I created a the hardware and software portion of the alarm clock
               using components from an Arduino set and using the official
-              Arduino IDE to run C code on the UNO 3
+              Arduino IDE to run C code on the UNO 3. The major components I
+              have used was the Passive Buzzer, a Shift Register and a LCD
+              Screen.
             </p>
             <FontAwesomeIcon
               icon={faGithub}
@@ -273,11 +336,12 @@ function App() {
             },
           }}
         >
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium sunt explicabo praesentium quibusdam alias sint, ipsa at nostrum omnis molestiae voluptates, eveniet suscipit quo doloribus libero eum. Modi, a voluptatibus!</p>
-          <p>Modi sed harum ad doloribus, iure quia non repudiandae necessitatibus sequi vero inventore labore, architecto earum explicabo nesciunt praesentium nobis suscipit. Porro obcaecati, doloremque voluptate nam natus minus quasi modi?</p>
-          <p>Excepturi fuga, voluptates omnis hic aperiam veritatis magni. Aut enim odit, debitis eum corporis, dolores voluptas doloribus, exercitationem cupiditate eaque iste! Sit impedit facere cum totam, recusandae possimus vitae laudantium!</p>
-          <p>Deleniti, minima itaque voluptatibus magni, temporibus cumque quos facilis, ratione aliquid voluptas nam voluptatum sequi! Blanditiis aliquid ex consequatur delectus? Corrupti, voluptatum delectus incidunt repudiandae dolorem cumque magni facere aliquid.</p>
-          <p>Sequi magnam beatae atque molestiae voluptatibus corrupti consequatur numquam rem voluptate velit, dignissimos est impedit doloribus minus, odit aliquid vitae temporibus saepe architecto? Mollitia id impedit laborum perspiciatis aspernatur. Hic?</p>
+          <ul>
+            <li>Dean&apos;s List</li>
+          </ul>
+          <ul>
+            <li>Chancellor&apos;s List</li>
+          </ul>
         </Section>
       </main>
       <footer
