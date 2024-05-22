@@ -12,6 +12,7 @@ function Section({
   container_motion = {},
   item_motion = {},
   styleCon = {},
+  windowWidth = 800,
 }) {
   return (
     <motion.section
@@ -31,13 +32,13 @@ function Section({
         }}
         whileHover={{ scale: 1.15 }}
       >
-        <Suspense fallback={<div>Loading...</div>}>
+        {windowWidth > 700 && (<Suspense fallback={<div>Loading...</div>}>
           <CubeScene cubeSize={[2.5, 2.5, 2.5]} />
-        </Suspense>
+        </Suspense>)}
         {section_title}
-        <Suspense fallback={<div>Loading...</div>}>
+        {windowWidth > 700 && (<Suspense fallback={<div>Loading...</div>}>
           <CubeScene cubeSize={[2.5, 2.5, 2.5]} />
-        </Suspense>
+        </Suspense>)}
       </motion.h2>
       {React.Children.map(children, (child) => (
         <motion.div

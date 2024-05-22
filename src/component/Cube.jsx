@@ -2,7 +2,6 @@ import { useRef } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Box } from '@react-three/drei';
 import './../App.css';
-import { width } from '@fortawesome/free-brands-svg-icons/fa42Group';
 
 const FloatingCube = ({ size = [1, 1, 1] }) => {
   const cubeRef = useRef();

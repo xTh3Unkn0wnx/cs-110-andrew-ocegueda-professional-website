@@ -1,5 +1,5 @@
 import './App.css';
-import React, { Suspense, useEffect } from 'react';
+import React, { Suspense, useEffect, useState } from 'react';
 import photo1 from './assets/Picture1.png';
 import ucr from './assets/UCR.jpg';
 import mvc from './assets/MVC.jpg';
@@ -15,6 +15,17 @@ const CubeScene = React.lazy(() => import('./component/Cube'));
 
 function App() {
   const controls = useAnimation();
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   useEffect(() => {
     controls.start({
@@ -75,13 +86,17 @@ function App() {
                     margin: '0 auto',
                   }}
                 >
-                  <Suspense fallback={<div>Loading...</div>}>
-                    <CubeScene cubeSize={[3, 3, 3]} />
-                  </Suspense>
+                  {windowWidth > 700 && (
+                    <Suspense fallback={<div>Loading...</div>}>
+                      <CubeScene cubeSize={[3, 3, 3]} />
+                    </Suspense>
+                  )}
                   Andrew Ocegueda
-                  <Suspense fallback={<div>Loading...</div>}>
-                    <CubeScene cubeSize={[3, 3, 3]} />
-                  </Suspense>
+                  {windowWidth > 700 && (
+                    <Suspense fallback={<div>Loading...</div>}>
+                      <CubeScene cubeSize={[3, 3, 3]} />
+                    </Suspense>
+                  )}
                 </div>
               </div>
             </motion.h1>
@@ -115,6 +130,7 @@ function App() {
           </div>
         </section>
         <Section
+          windowWidth={windowWidth}
           section_title='About Me'
           section_id='about-me'
           classnames='about-me adjustable-padding min-height'
@@ -144,7 +160,8 @@ function App() {
           </p>
         </Section>
         <Section
-          section_title='Education'
+          windowWidth={windowWidth}
+          section_title='Education/Skills'
           section_id='education'
           classnames={'education-container'}
           container_motion={{
@@ -253,8 +270,198 @@ function App() {
               }}
             />
           </section>
+          <section>
+            <h2
+              style={{
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}
+            >
+              <div>
+                <Suspense fallback={<div>Loading...</div>}>
+                  <CubeScene
+                    cubeSize={[2, 2, 2]}
+                    size='4rem'
+                  />
+                </Suspense>
+              </div>
+              <div>Skills</div>
+            </h2>
+            <ul
+              style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(3, 1fr)',
+                listStyleType: 'none',
+              }}
+            >
+              <li
+                style={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}
+              >
+                Python
+              </li>
+              <li
+                style={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}
+              >
+                Java
+              </li>
+              <li
+                style={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}
+              >
+                JavaScript
+              </li>
+              <li
+                style={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}
+              >
+                React
+              </li>
+              <li
+                style={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}
+              >
+                NodeJS
+              </li>
+              <li
+                style={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}
+              >
+                Express
+              </li>
+              <li
+                style={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}
+              >
+                MongoDB
+              </li>
+              <li
+                style={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}
+              >
+                C/C++
+              </li>
+              <li
+                style={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}
+              >
+                HTML/CSS
+              </li>
+              <li
+                style={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}
+              >
+                SQL
+              </li>
+              <li
+                style={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}
+              >
+                Git
+              </li>
+              <li
+                style={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}
+              >
+                Framer Motion
+              </li>
+              <li
+                style={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}
+              >
+                ThreeJS/Fiber
+              </li>
+              <li
+                style={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}
+              >
+                Rust
+              </li>
+              <li
+                style={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}
+              >
+                Github
+              </li>
+              <li
+                style={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}
+              >
+                Docker
+              </li>
+              <li
+                style={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}
+              >
+                FastAPI
+              </li>
+              <li
+                style={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}
+              >
+                Arduino
+              </li>
+            </ul>
+          </section>
         </Section>
         <Section
+          windowWidth={windowWidth}
           section_title={'Projects'}
           section_id='projects'
           container_motion={{
@@ -285,7 +492,13 @@ function App() {
                 Live Active
               </span>
             </h3>
-            <p>
+            <p
+              style={{
+                color: 'white',
+                opacity: '0.75',
+                fontSize: '1.25rem',
+              }}
+            >
               Technologies: React, MongoDB Atlas, Express, NodeJS, React Router,
               Fast API
             </p>
@@ -297,26 +510,49 @@ function App() {
               also has a feature that allows users to create, read, update, and
               delete posts regarding meals plans or exercises.
             </p>
-            <FontAwesomeIcon
-              icon={faGithub}
-              aria-label='react logo'
-            />
+            <a href='https://github.com/xTh3Unkn0wnx/CS-180-Live-Active'>
+              <FontAwesomeIcon
+                icon={faGithub}
+                aria-label='react logo'
+              />
+            </a>
           </section>
           <section>
             <h3>Dynamic Programming Algorithm</h3>
+            <p
+              style={{
+                color: 'white',
+                opacity: '0.75',
+                fontSize: '1.25rem',
+              }}
+            >
+              Technologies: C++
+            </p>
             <p>
               I created a program that utilizes dynamic programming to find the
               shortest amount of edits between two words. For example, to Change
               &quot;Goblin&quot; to &quot;Goblet&quot; it would take 2 edits.
               Replacing the i with an e and replacing n with t.
             </p>
-            <FontAwesomeIcon
-              icon={faGithub}
-              aria-label='react logo'
-            />
+            <a href='https://github.com/xTh3Unkn0wnx/CS_141_Final_Project'>
+              <FontAwesomeIcon
+                icon={faGithub}
+                aria-label='react logo'
+              />
+            </a>
           </section>
           <section>
             <h3>Arduino Alarm Clock</h3>
+            <p
+              style={{
+                color: 'white',
+                opacity: '0.75',
+                fontSize: '1.25rem',
+              }}
+            >
+              Technologies: Arduino UNO R3, Arduino Components, Arduino IDE,
+              74HC595 Shift Register, Passive Buzzer, 2x16 LCD Display
+            </p>
             <p>
               I created a the hardware and software portion of the alarm clock
               using components from an Arduino set and using the official
@@ -324,13 +560,16 @@ function App() {
               have used was the Passive Buzzer, a Shift Register and a LCD
               Screen.
             </p>
-            <FontAwesomeIcon
-              icon={faGithub}
-              aria-label='react logo'
-            />
+            <a href='https://github.com/xTh3Unkn0wnx/Arduino_Projects/tree/main/CS_120B_Final_Project'>
+              <FontAwesomeIcon
+                icon={faGithub}
+                aria-label='react logo'
+              />
+            </a>
           </section>
         </Section>
         <Section
+          windowWidth={windowWidth}
           section_title={'Achievements'}
           section_id='achievements'
           container_motion={{
@@ -351,10 +590,35 @@ function App() {
         >
           <ul>
             <li>Dean&apos;s List</li>
+            <p>Have a 3.5 GPA for the quarter</p>
           </ul>
           <ul>
             <li>Chancellor&apos;s List</li>
+            <p>Maintain a 3.5 GPA for 3 consecutive quarters</p>
           </ul>
+        </Section>
+        <Section
+          windowWidth={windowWidth}
+          section_title={'Interests'}
+          section_id={'interests'}
+          container_motion={{
+            variants: container,
+            initial: 'hidden',
+            whileInView: 'show',
+            viewport: { once: true, margin: '-50%' },
+          }}
+          item_motion={{
+            variants: item,
+          }}
+          styleCon={{
+            style: {
+              backgroundColor: 'rgba(0, 0, 0, 0.75)',
+              color: 'white',
+            },
+          }}
+        >
+          <p>I am a Video Game Enthusiast, I enjoy playing games on the PS5 or on a PC.</p>
+
         </Section>
       </main>
       <footer
