@@ -19,30 +19,20 @@ header {
 }
 
 footer {
-  /* padding: 5vh 5vw 5vh 5vw; */
   display: flex;
   justify-content: space-between;
 }
 
-/* main {
-  padding-top: 100px;
-} */
-
 main section {
-    padding: 20px 0 20px 0;
+  padding: 20px 0 20px 0;
 }
 
 /* Classes */
 
-/* .picture-container {
-
-} */
-
 .profile-pic {
   width: 300px;
   height: 300px;
-  background-color: rgba(0, 0, 0, 0.50);
-  /* background-color: #2d0052; */
+  background-color: rgba(0, 0, 0, 0.5);
   display: block;
   margin: 0 auto;
   border-radius: 50%;
@@ -52,7 +42,6 @@ main section {
   width: 100vw;
   height: 100px;
   background-color: #1b4a16;
-  /* padding: 5vh 5vw 5vh 5vw; */
 }
 
 .nav-list {
@@ -69,7 +58,7 @@ main section {
 
 .hero-section {
   margin: auto;
-  background-image: url("./assets/pexels-danielabsi-952670.jpg");
+  background-image: url('./assets/pexels-danielabsi-952670.jpg');
   background-size: cover;
 }
 
@@ -82,12 +71,6 @@ main section {
   text-align: center;
   font-weight: 400;
 }
-
-/* .three-js-container {
-  display: inline !important;
-  width: 100%;
-  height: 100%;
-} */
 
 /* Utility Classes */
 
@@ -108,5 +91,112 @@ main section {
   animation: fadeIn 5s ease-in-out forwards;
 }
 
+.header-bar-adjustable {
+  background-color: rgba(0, 0, 0, 0.85);
+  color: white;
+}
 
-/* Media Queries */
+#top {
+  display: absolute;
+  height: 0;
+  width: 0;
+}
+
+.hero-section-adjustable {
+  padding-top: 200px;
+}
+
+.hero-heading-adjustable {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  margin-bottom: 30px;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-about-me-adjustable {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.75);
+  margin-top: 30px;
+}
+
+.about-me-adjustable {
+  background-color: rgba(0, 0, 0, 0.95);
+  color: white;
+}
+
+.education-container-adjustable {
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+}
+
+.logo-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 2px solid white;
+  margin: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  list-style-type: none;
+}
+
+.projects-adjustable {
+  background-color: rgba(0, 0, 0, 0.85);
+  color: white;
+}
+
+.projects-text {
+  color: white;
+  opacity: 0.75;
+  font-size: 1.25rem;
+}
+
+.achievements-adjustable {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+}
+
+.interests-adjustable {
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+}
+
+.footer-adjustable {
+  background-color: rgba(0, 0, 0, 0.95);
+  color: white;
+}
+
+/* Section Component Styles */
+.section-title {
+  font-size: 4rem;
+  margin: 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-child {
+  margin: 2rem 0;
+  font-size: 1.5rem;
+}
+
+/* CubeScene Component Styles */
+.cube-inline {
+  display: inline-block;
+}
+
+.cube-canvas {
+  width: 100%;
+  height: 100%;
+}

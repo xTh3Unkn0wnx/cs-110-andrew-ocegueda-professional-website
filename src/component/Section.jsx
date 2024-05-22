@@ -22,32 +22,27 @@ function Section({
       id={section_id}
     >
       <motion.h2
+        className='section-title'
         {...item_motion}
-        style={{
-          fontSize: '4rem',
-          margin: '2rem 0',
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}
         whileHover={{ scale: 1.15 }}
       >
-        {windowWidth > 700 && (<Suspense fallback={<div>Loading...</div>}>
-          <CubeScene cubeSize={[2.5, 2.5, 2.5]} />
-        </Suspense>)}
+        {windowWidth > 700 && (
+          <Suspense fallback={<div>Loading...</div>}>
+            <CubeScene cubeSize={[2.5, 2.5, 2.5]} />
+          </Suspense>
+        )}
         {section_title}
-        {windowWidth > 700 && (<Suspense fallback={<div>Loading...</div>}>
-          <CubeScene cubeSize={[2.5, 2.5, 2.5]} />
-        </Suspense>)}
+        {windowWidth > 700 && (
+          <Suspense fallback={<div>Loading...</div>}>
+            <CubeScene cubeSize={[2.5, 2.5, 2.5]} />
+          </Suspense>
+        )}
       </motion.h2>
       {React.Children.map(children, (child) => (
         <motion.div
+          className='section-child'
           {...item_motion}
           whileHover={{ scale: 1.05 }}
-          style={{
-            margin: '2rem 0',
-            fontSize: '1.5rem',
-          }}
         >
           {child}
         </motion.div>
@@ -55,50 +50,5 @@ function Section({
     </motion.section>
   );
 }
-
-// const Section = React.forwardRef(
-//   (
-//     {
-//       section_title = "Section Title",
-//       classnames = "",
-//       children = null,
-//       // animation = {
-//       //   initial: { opacity: 0 },
-//       //   animate: { opacity: 1 },
-//       //   transition: { duration: 1},
-//       // },
-//     },
-//     ref
-//   ) => {
-
-//     return (
-//       <motion.section
-//         ref={ref}
-//         className={` ${classnames} about-me adjustable-padding min-height `}
-//         // initial={animation.initial}
-//         // animate={animation.animate}
-//         // transition={{ staggerChildren: 2 }}
-//         variants={container}
-//         initial="hidden"
-//         animate="show"
-//         whileHover={{ scale: 1.05 }}
-//       >
-//         <motion.h2 variants={item}>{section_title}</motion.h2>
-//         {React.Children.map(children, (child) => (
-//           <motion.div
-//             // initial={animation.initial}
-//             // animate={animation.animate}
-//             // transition={animation.transition}
-//             variants={item}
-//           >
-//             {child}
-//           </motion.div>
-//         ))}
-//       </motion.section>
-//     );
-//   }
-// );
-
-// Section.displayName = "Section";
 
 export default Section;

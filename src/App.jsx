@@ -4,13 +4,12 @@ import photo1 from './assets/Picture1.png';
 import ucr from './assets/UCR.jpg';
 import mvc from './assets/MVC.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { motion, useAnimation } from 'framer-motion';
 import NavBar from './component/NavBar';
 import Section from './component/Section';
+import Footer from './component/Footer';
 import { container, item, item2 } from './component/Animation';
-// import CubeScene from './component/Cube';
 const CubeScene = React.lazy(() => import('./component/Cube'));
 
 function App() {
@@ -37,54 +36,25 @@ function App() {
 
   return (
     <>
-      <header
-        className='header-bar adjustable-padding'
-        style={{
-          backgroundColor: 'rgba(0, 0, 0, 0.85)',
-          color: 'white',
-        }}
-      >
+      <header className='header-bar adjustable-padding header-bar-adjustable'>
         <NavBar />
       </header>
-      <div
-        id='top'
-        style={{
-          display: 'absolute',
-          height: '0',
-          width: '0',
-        }}
-      ></div>
+      <div id='top'></div>
       <main>
         <section
           aria-label='hero section'
           id='hero'
-          className='hero-section adjustable-padding min-height'
-          style={{
-            paddingTop: '200px',
-          }}
+          className='hero-section adjustable-padding min-height hero-section-adjustable'
         >
           <div className='hero-container'>
             <motion.h1
-              className='hero-heading'
-              style={{
-                color: 'white',
-                backgroundColor: 'rgba(0, 0, 0, 0.60)',
-                marginBottom: '30px',
-              }}
+              className='hero-heading hero-heading-adjustable'
               whileHover={{ y: -30 }}
             >
-              <div
-                style={{
-                  display: 'flex',
-                }}
-              >
+              <div className='flex-center'>
                 <div
-                  style={{
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    margin: '0 auto',
-                  }}
+                  className='flex-center'
+                  style={{ margin: '0 auto' }}
                 >
                   {windowWidth > 700 && (
                     <Suspense fallback={<div>Loading...</div>}>
@@ -115,12 +85,7 @@ function App() {
               />
             </motion.div>
             <motion.p
-              className='hero-about-me'
-              style={{
-                color: 'white',
-                backgroundColor: 'rgba(0, 0, 0, 0.75)',
-                marginTop: '30px',
-              }}
+              className='hero-about-me hero-about-me-adjustable'
               whileHover={{ y: 20 }}
             >
               I am Andrew Ocegueda, a Senior Computer Science with Business
@@ -181,13 +146,7 @@ function App() {
           }}
         >
           <section>
-            <h3
-              style={{
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}
-            >
+            <h3 className='flex-center'>
               <div>
                 <Suspense fallback={<div>Loading...</div>}>
                   <CubeScene
@@ -201,38 +160,17 @@ function App() {
                 <span className='right'>August 2021 - June 2024</span>
               </div>
             </h3>
-            <p
-              style={{
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}
-            >
+            <p className='flex-center'>
               Bachelor of Science in Computer Science with Business Applications
             </p>
             <img
               src={ucr}
               alt='Logo of UCR'
-              style={{
-                width: '200px',
-                height: '200px',
-                borderRadius: '50%',
-                border: '2px solid white',
-                margin: '10px',
-                display: 'block',
-                marginLeft: 'auto',
-                marginRight: 'auto',
-              }}
+              className='logo-img'
             />
           </section>
           <section>
-            <h3
-              style={{
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}
-            >
+            <h3 className='flex-center'>
               <div>
                 <Suspense fallback={<div>Loading...</div>}>
                   <CubeScene
@@ -246,38 +184,15 @@ function App() {
                 <span className='right'>June 2018 - June 2021</span>
               </div>
             </h3>
-            <p
-              style={{
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}
-            >
-              Computer Science for Transfer
-            </p>
+            <p className='flex-center'>Computer Science for Transfer</p>
             <img
               src={mvc}
               alt='Logo of Moreno Valley College'
-              style={{
-                width: '200px',
-                height: '200px',
-                borderRadius: '50%',
-                border: '2px solid white',
-                margin: '10px',
-                display: 'block',
-                marginLeft: 'auto',
-                marginRight: 'auto',
-              }}
+              className='logo-img'
             />
           </section>
           <section>
-            <h2
-              style={{
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}
-            >
+            <h2 className='flex-center'>
               <div>
                 <Suspense fallback={<div>Loading...</div>}>
                   <CubeScene
@@ -288,175 +203,25 @@ function App() {
               </div>
               <div>Skills</div>
             </h2>
-            <ul
-              style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(3, 1fr)',
-                listStyleType: 'none',
-              }}
-            >
-              <li
-                style={{
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                }}
-              >
-                Python
-              </li>
-              <li
-                style={{
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                }}
-              >
-                Java
-              </li>
-              <li
-                style={{
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                }}
-              >
-                JavaScript
-              </li>
-              <li
-                style={{
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                }}
-              >
-                React
-              </li>
-              <li
-                style={{
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                }}
-              >
-                NodeJS
-              </li>
-              <li
-                style={{
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                }}
-              >
-                Express
-              </li>
-              <li
-                style={{
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                }}
-              >
-                MongoDB
-              </li>
-              <li
-                style={{
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                }}
-              >
-                C/C++
-              </li>
-              <li
-                style={{
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                }}
-              >
-                HTML/CSS
-              </li>
-              <li
-                style={{
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                }}
-              >
-                SQL
-              </li>
-              <li
-                style={{
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                }}
-              >
-                Git
-              </li>
-              <li
-                style={{
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                }}
-              >
-                Framer Motion
-              </li>
-              <li
-                style={{
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                }}
-              >
-                ThreeJS/Fiber
-              </li>
-              <li
-                style={{
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                }}
-              >
-                Rust
-              </li>
-              <li
-                style={{
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                }}
-              >
-                Github
-              </li>
-              <li
-                style={{
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                }}
-              >
-                Docker
-              </li>
-              <li
-                style={{
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                }}
-              >
-                FastAPI
-              </li>
-              <li
-                style={{
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                }}
-              >
-                Arduino
-              </li>
+            <ul className='skills-grid'>
+              <li className='flex-center'>Python</li>
+              <li className='flex-center'>Java</li>
+              <li className='flex-center'>JavaScript</li>
+              <li className='flex-center'>React</li>
+              <li className='flex-center'>NodeJS</li>
+              <li className='flex-center'>Express</li>
+              <li className='flex-center'>MongoDB</li>
+              <li className='flex-center'>C/C++</li>
+              <li className='flex-center'>HTML/CSS</li>
+              <li className='flex-center'>SQL</li>
+              <li className='flex-center'>Git</li>
+              <li className='flex-center'>Framer Motion</li>
+              <li className='flex-center'>ThreeJS/Fiber</li>
+              <li className='flex-center'>Rust</li>
+              <li className='flex-center'>Github</li>
+              <li className='flex-center'>Docker</li>
+              <li className='flex-center'>FastAPI</li>
+              <li className='flex-center'>Arduino</li>
             </ul>
           </section>
         </Section>
@@ -483,22 +248,9 @@ function App() {
           <section>
             <h3>
               Full Stack Website{' '}
-              <span
-                style={{
-                  opacity: '0.5',
-                  fontSize: '1.5rem',
-                }}
-              >
-                Live Active
-              </span>
+              <span className='projects-text'>Live Active</span>
             </h3>
-            <p
-              style={{
-                color: 'white',
-                opacity: '0.75',
-                fontSize: '1.25rem',
-              }}
-            >
+            <p className='projects-text'>
               Technologies: React, MongoDB Atlas, Express, NodeJS, React Router,
               Fast API
             </p>
@@ -519,15 +271,7 @@ function App() {
           </section>
           <section>
             <h3>Dynamic Programming Algorithm</h3>
-            <p
-              style={{
-                color: 'white',
-                opacity: '0.75',
-                fontSize: '1.25rem',
-              }}
-            >
-              Technologies: C++
-            </p>
+            <p className='projects-text'>Technologies: C++</p>
             <p>
               I created a program that utilizes dynamic programming to find the
               shortest amount of edits between two words. For example, to Change
@@ -543,13 +287,7 @@ function App() {
           </section>
           <section>
             <h3>Arduino Alarm Clock</h3>
-            <p
-              style={{
-                color: 'white',
-                opacity: '0.75',
-                fontSize: '1.25rem',
-              }}
-            >
+            <p className='projects-text'>
               Technologies: Arduino UNO R3, Arduino Components, Arduino IDE,
               74HC595 Shift Register, Passive Buzzer, 2x16 LCD Display
             </p>
@@ -617,36 +355,13 @@ function App() {
             },
           }}
         >
-          <p>I am a Video Game Enthusiast, I enjoy playing games on the PS5 or on a PC.</p>
-
+          <p>
+            I am a Video Game Enthusiast, I enjoy playing games on the PS5 or on
+            a PC.
+          </p>
         </Section>
       </main>
-      <footer
-        id='footer'
-        className='adjustable-padding'
-        style={{
-          backgroundColor: 'rgba(0, 0, 0, 0.95)',
-          color: 'white',
-        }}
-      >
-        <p>
-          <a href='https://github.com/xTh3Unkn0wnx'>
-            <FontAwesomeIcon icon={faGithub} />
-          </a>
-        </p>
-        <p>
-          <a href='https://www.linkedin.com/in/andrew-ocegueda-715206230?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BhesREb0KRy2g6rmzHum7Tg%3D%3D'>
-            <FontAwesomeIcon icon={faLinkedin} />
-          </a>
-        </p>
-        <p>
-          <FontAwesomeIcon icon={faPhone} /> Phone: (999) 999-9999
-        </p>
-        <p>
-          <FontAwesomeIcon icon={faEnvelope} />
-          Email: aaaaaa@aaaaa.aaa{' '}
-        </p>
-      </footer>
+      <Footer />
     </>
   );
 }

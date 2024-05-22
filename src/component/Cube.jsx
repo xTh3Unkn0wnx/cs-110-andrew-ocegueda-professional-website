@@ -28,38 +28,17 @@ const FloatingCube = ({ size = [1, 1, 1] }) => {
 };
 
 const CubeScene = ({ size = '6rem', cubeSize }) => {
-  const style = {
-    inline: {
-      display: 'inline-block',
-      width: size,
-      height: size,
-    },
-    canvas: {
-      width: '100%',
-      height: '100%',
-    },
-  };
   return (
-    <span style={style.inline}>
-      <Canvas style={style.canvas}>
+    <span
+      className='cube-inline'
+      style={{ width: size, height: size }}
+    >
+      <Canvas className='cube-canvas'>
         <ambientLight intensity={0.5} />
-        {/* <pointLight position={[, 10, 10]} /> */}
-        <FloatingCube size={cubeSize}/>
+        <FloatingCube size={cubeSize} />
       </Canvas>
     </span>
   );
-};
-
-const style = {
-  inline: {
-    display: 'inline-block',
-    width: '6rem',
-    height: '6rem',
-  },
-  canvas: {
-    width: '100%',
-    height: '100%',
-  },
 };
 
 export default CubeScene;
