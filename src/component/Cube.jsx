@@ -27,7 +27,7 @@ const FloatingCube = ({ size = [1, 1, 1] }) => {
   );
 };
 
-const CubeScene = ({ size = '6rem', cubeSize }) => {
+const CubeScene = ({ size = '6rem', cubeSize = [1,1,1] }) => {
   return (
     <span
       className='cube-inline'

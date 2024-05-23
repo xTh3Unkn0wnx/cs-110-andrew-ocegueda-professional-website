@@ -40,7 +40,7 @@ function App() {
         <NavBar />
       </header>
       <div id='top'></div>
-      <main>
+      <main id='main'>
         <section
           aria-label='hero section'
           id='hero'
@@ -103,7 +103,7 @@ function App() {
             variants: container,
             initial: 'hidden',
             whileInView: 'show',
-            viewport: { once: true, margin: '-50%' },
+            viewport: { once: true, },
           }}
           item_motion={{
             variants: item,
@@ -133,7 +133,7 @@ function App() {
             variants: container,
             initial: 'hidden',
             whileInView: 'show',
-            viewport: { once: true, margin: '-50%' },
+            viewport: { once: true, },
           }}
           item_motion={{
             variants: item2,
@@ -233,7 +233,7 @@ function App() {
             variants: container,
             initial: 'hidden',
             whileInView: 'show',
-            viewport: { once: true, margin: '-50%' },
+            viewport: { once: true, },
           }}
           item_motion={{
             variants: item,
@@ -314,7 +314,7 @@ function App() {
             variants: container,
             initial: 'hidden',
             whileInView: 'show',
-            viewport: { once: true, margin: '-50%' },
+            viewport: { once: true, },
           }}
           item_motion={{
             variants: item,
@@ -343,7 +343,7 @@ function App() {
             variants: container,
             initial: 'hidden',
             whileInView: 'show',
-            viewport: { once: true, margin: '-50%' },
+            viewport: { once: true, },
           }}
           item_motion={{
             variants: item,
@@ -357,7 +357,24 @@ function App() {
         >
           <p>
             I am a Video Game Enthusiast, I enjoy playing games on the PS5 or on
-            a PC.
+            a PC.Some games I enjoy are: The Witcher 3, Cyberpunk 2077,
+            Minecraft, Fallout 4 (Vanilla and Modded), and many more. I enjoy
+            mostly playing solo games but I do enjoy playing multiplayer games
+            with friends from time to time.
+          </p>
+          <p>
+            I also enjoy watching animated shows and movies. Some of my favorite
+            shows are Regular Show, Amazing World of Gumball, and Adventure
+            Time. There is something about the art style and the humor that I
+            enjoy from these animated shows that are not present in other shows.
+          </p>
+          <p>
+            I also watch many YouTubers who have a background in Web Development
+            or Software Engineering. Some content creators I watch are
+            FireshipTV, Theo - t3.gg, and Dave Gray. I not only get to learn new
+            things on the topic of software engineering or learn what is going
+            on in the field, I get a good laugh out of their spin for their
+            content.
           </p>
         </Section>
       </main>

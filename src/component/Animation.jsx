@@ -1,7 +1,7 @@
 // import { motion } from "framer-motion";
 
 export const container = {
-  hidden: { opacity: 0 },
+  hidden: { opacity: 0.75 },
   show: {
     opacity: 1,
     transition: {
@@ -12,11 +12,11 @@ export const container = {
 };
 
 export const item = {
-  hidden: { opacity: 0, y: -100, x: -500 },
+  hidden: { opacity: 0.75, y: -100, x: -500 },
   show: { opacity: 1, y: 0, x: 0 },
 };
 
 export const item2 = {
-  hidden: { opacity: 0, y: 100, x: 500 },
+  hidden: { opacity: 0.5, y: 100, x: 500 },
   show: { opacity: 1, y: 0, x: 0 },
 };
