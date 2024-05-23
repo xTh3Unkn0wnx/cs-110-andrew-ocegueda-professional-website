@@ -19,10 +19,10 @@ function Footer() {
         </a>
       </p>
       <p>
-        <FontAwesomeIcon icon={faPhone} /> Phone: (999) 999-9999
+        <FontAwesomeIcon icon={faPhone} /> Phone: (951) 314-8381
       </p>
       <p>
-        <FontAwesomeIcon icon={faEnvelope} /> Email: aaaaaa@aaaaa.aaa
+        <FontAwesomeIcon icon={faEnvelope} /> Email: andrewocegueda2018@gmail.com
       </p>
     </footer>
   );
