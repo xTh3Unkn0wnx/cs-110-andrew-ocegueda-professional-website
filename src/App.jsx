@@ -103,7 +103,7 @@ function App() {
             variants: container,
             initial: 'hidden',
             whileInView: 'show',
-            viewport: { once: true, },
+            viewport: { once: true },
           }}
           item_motion={{
             variants: item,
@@ -123,6 +123,15 @@ function App() {
             looking for ways to improve and grow. I am currently seeking a
             full-time position in software engineering or data science.
           </p>
+          <p>
+            I have personal experience in developing full stack web applications
+            using the MERN stack and programming in languages such as C++, Java,
+            Python and Rust. I hope to gain more experience in the field of
+            software engineering, and possibly even data science. I am always
+            looking for ways to improve my skills and learn new technologies. I
+            enjoy trying to solve problems and create new applications that
+            solve real world problems.
+          </p>
         </Section>
         <Section
           windowWidth={windowWidth}
@@ -133,7 +142,7 @@ function App() {
             variants: container,
             initial: 'hidden',
             whileInView: 'show',
-            viewport: { once: true, },
+            viewport: { once: true },
           }}
           item_motion={{
             variants: item2,
@@ -163,7 +172,7 @@ function App() {
             <p className='flex-center'>
               Bachelor of Science in Computer Science with Business Applications
             </p>
-            <div className="image-container">
+            <div className='image-container'>
               <img
                 src={ucr}
                 alt='Logo of UCR'
@@ -187,7 +196,7 @@ function App() {
               </div>
             </h3>
             <p className='flex-center'>Computer Science for Transfer</p>
-            <div className="image-container">
+            <div className='image-container'>
               <img
                 src={mvc}
                 alt='Logo of Moreno Valley College'
@@ -205,7 +214,7 @@ function App() {
                   />
                 </Suspense>
               </div>
-              <div>Skills</div>
+              <div>Skills & Technologies</div>
             </h2>
             <ul className='skills-grid'>
               <li className='flex-center'>Python</li>
@@ -237,7 +246,7 @@ function App() {
             variants: container,
             initial: 'hidden',
             whileInView: 'show',
-            viewport: { once: true, },
+            viewport: { once: true },
           }}
           item_motion={{
             variants: item,
@@ -250,11 +259,11 @@ function App() {
           }}
         >
           <section>
-            <h3>
+            <h3 className='big'>
               Full Stack Website{' '}
               <span className='projects-text'>Live Active</span>
             </h3>
-            <p className='projects-text'>
+            <p className='projects-text small'>
               Technologies: React, MongoDB Atlas, Express, NodeJS, React Router,
               Fast API
             </p>
@@ -274,8 +283,8 @@ function App() {
             </a>
           </section>
           <section>
-            <h3>Dynamic Programming Algorithm</h3>
-            <p className='projects-text'>Technologies: C++</p>
+            <h3 className='big'>Dynamic Programming Algorithm</h3>
+            <p className='projects-text small'>Technologies: C++</p>
             <p>
               I created a program that utilizes dynamic programming to find the
               shortest amount of edits between two words. For example, to Change
@@ -290,8 +299,8 @@ function App() {
             </a>
           </section>
           <section>
-            <h3>Arduino Alarm Clock</h3>
-            <p className='projects-text'>
+            <h3 className='big'>Arduino Alarm Clock</h3>
+            <p className='projects-text small'>
               Technologies: Arduino UNO R3, Arduino Components, Arduino IDE,
               74HC595 Shift Register, Passive Buzzer, 2x16 LCD Display
             </p>
@@ -318,7 +327,7 @@ function App() {
             variants: container,
             initial: 'hidden',
             whileInView: 'show',
-            viewport: { once: true, },
+            viewport: { once: true },
           }}
           item_motion={{
             variants: item,
@@ -347,7 +356,7 @@ function App() {
             variants: container,
             initial: 'hidden',
             whileInView: 'show',
-            viewport: { once: true, },
+            viewport: { once: true },
           }}
           item_motion={{
             variants: item,
