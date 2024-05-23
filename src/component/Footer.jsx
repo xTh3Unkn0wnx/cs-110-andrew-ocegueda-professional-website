@@ -10,12 +10,12 @@ function Footer() {
     >
       <p>
         <a href='https://github.com/xTh3Unkn0wnx'>
-          <FontAwesomeIcon icon={faGithub} />
+          <FontAwesomeIcon icon={faGithub} className='icon'/>
         </a>
       </p>
       <p>
         <a href='https://www.linkedin.com/in/andrew-ocegueda-715206230?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BhesREb0KRy2g6rmzHum7Tg%3D%3D'>
-          <FontAwesomeIcon icon={faLinkedin} />
+          <FontAwesomeIcon icon={faLinkedin} className='icon'/>
         </a>
       </p>
       <p>
