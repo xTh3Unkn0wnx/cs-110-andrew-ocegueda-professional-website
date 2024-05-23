@@ -81,19 +81,21 @@ main section {
 }
 
 .hero-container {
-  animation: fadeIn 1s ease-in-out;
+  /* animation: fadeIn 1s ease-in-out; */
+  width: 100%;
 }
 
 .hero-about-me {
   font-size: 1.75rem;
   text-align: center;
   font-weight: 400;
+  white-space: normal;
 }
 
 /* Utility Classes */
 
 .adjustable-padding {
-  padding: 5vh 5vw 5vh 5vw;
+  padding: 5vh 5vw;
 }
 
 .min-height {
@@ -102,7 +104,7 @@ main section {
 }
 
 .invisible {
-  opacity: 0;
+  opacity: 0.10;
 }
 
 .animate-on-scroll {
@@ -153,14 +155,16 @@ main section {
 }
 
 .logo-img {
-  width: 200px;
-  height: 200px;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
   border-radius: 50%;
-  border: 2px solid white;
-  margin: 10px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .skills-grid {
@@ -244,6 +248,10 @@ main section {
     font-size: 1rem;
   }
 
+  .logo-img {
+    max-width: 200px;
+  }
+
 }
 
 /* Medium devices (tablets, 600px - 900px) */
@@ -272,6 +280,10 @@ main section {
   .nav-list {
     flex-direction: row;
   }
+
+  .logo-img {
+    max-width: 300px;
+  }
 }
 
 /* Large devices (desktops, 900px and up) */
@@ -299,6 +311,10 @@ main section {
 
   .nav-list {
     flex-direction: row;
+  }
+
+  .logo-img {
+    max-width: 400px;
   }
 }
 

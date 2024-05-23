@@ -163,11 +163,13 @@ function App() {
             <p className='flex-center'>
               Bachelor of Science in Computer Science with Business Applications
             </p>
-            <img
-              src={ucr}
-              alt='Logo of UCR'
-              className='logo-img'
-            />
+            <div className="image-container">
+              <img
+                src={ucr}
+                alt='Logo of UCR'
+                className='logo-img'
+              />
+            </div>
           </section>
           <section>
             <h3 className='flex-center'>
@@ -185,11 +187,13 @@ function App() {
               </div>
             </h3>
             <p className='flex-center'>Computer Science for Transfer</p>
-            <img
-              src={mvc}
-              alt='Logo of Moreno Valley College'
-              className='logo-img'
-            />
+            <div className="image-container">
+              <img
+                src={mvc}
+                alt='Logo of Moreno Valley College'
+                className='logo-img'
+              />
+            </div>
           </section>
           <section>
             <h2 className='flex-center'>
