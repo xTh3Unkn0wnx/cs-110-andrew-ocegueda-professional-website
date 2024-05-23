@@ -1,4 +1,4 @@
-import{r as ke,g as O0,j as mn}from"./index-C1rZmM1z.js";/**
+import{r as ke,g as O0,j as mn}from"./index-COzKfdSU.js";/**
  * @license
  * Copyright 2010-2024 Three.js Authors
  * SPDX-License-Identifier: MIT
