@@ -53,6 +53,9 @@ main section {
   width: 100vw;
   height: auto;
   background-color: #1b4a16;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .nav-list {

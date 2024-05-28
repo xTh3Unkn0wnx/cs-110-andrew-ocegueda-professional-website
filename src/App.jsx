@@ -103,7 +103,7 @@ function App() {
             variants: container,
             initial: 'hidden',
             whileInView: 'show',
-            viewport: { once: true },
+            viewport: { once: true, amount: 0.3 },
           }}
           item_motion={{
             variants: item,
@@ -142,7 +142,7 @@ function App() {
             variants: container,
             initial: 'hidden',
             whileInView: 'show',
-            viewport: { once: true },
+            viewport: { once: true, amount: 0.3 },
           }}
           item_motion={{
             variants: item2,
@@ -246,7 +246,7 @@ function App() {
             variants: container,
             initial: 'hidden',
             whileInView: 'show',
-            viewport: { once: true },
+            viewport: { once: true, amount: 0.3 },
           }}
           item_motion={{
             variants: item,
@@ -327,7 +327,7 @@ function App() {
             variants: container,
             initial: 'hidden',
             whileInView: 'show',
-            viewport: { once: true },
+            viewport: { once: true, amount: 0.3 },
           }}
           item_motion={{
             variants: item,
@@ -356,7 +356,7 @@ function App() {
             variants: container,
             initial: 'hidden',
             whileInView: 'show',
-            viewport: { once: true },
+            viewport: { once: true, amount: 0.3 },
           }}
           item_motion={{
             variants: item,
